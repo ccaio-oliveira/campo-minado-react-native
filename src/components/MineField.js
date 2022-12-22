@@ -1,10 +1,10 @@
 import { View, StyleSheet } from "react-native";
 import Field from './Field';
 
-export default ({board}) => {
+export default ({board, onOpenField}) => {
     const rows = board.map((row, r) => {
         const columns = row.map((field, c) => {
-            return <Field {...field} key={c} />
+            return <Field {...field} key={c} onOpen={() => onOpenField(r, c)} />
         })
         return <View key={r} style={{ flexDirection: 'row'}}>{columns}</View>
     })
