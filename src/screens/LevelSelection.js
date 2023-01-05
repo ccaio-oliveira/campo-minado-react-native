@@ -14,7 +14,7 @@ export default ({ onCancel, isVisible, onLevelSelected }) => {
                         onPress={() => onLevelSelected(0.2)}>
                         <Text style={styles.buttonLabel}>Intermediário</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.button, styles.bgDificil]}
+                    <TouchableOpacity style={[styles.button, styles.bgHard]}
                         onPress={() => onLevelSelected(0.3)}>
                         <Text style={styles.buttonLabel}>Difícil</Text>
                     </TouchableOpacity>
@@ -52,5 +52,11 @@ const styles = StyleSheet.create({
     },
     bgEasy: {
         backgroundColor: '#49b65d'
+    },
+    bgNormal: {
+        backgroundColor: '#2765F7'
+    },
+    bgHard: {
+        backgroundColor: '#F26337'
     }
 })
